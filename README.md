@@ -9,4 +9,4 @@ Currently, two official plugins are available:
 
 #Vercel link
 Vercel Link is 
-dev-folio-beta.vercel.app
+[dev-folio-beta.vercel.app](https://dev-folio-beta.vercel.app/)
