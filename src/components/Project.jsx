@@ -28,15 +28,15 @@ const Project = () => {
           {/* card 2 */}
           <div className='w-1/3 shadow-md shadow-red-200 border-custom-blue border-solid border-2 p-3 rounded-xl flex flex-col text-center gap-y-12'>
             <div className='w-full p-1 drop-shadow-lg h-52'>
-              <a href='https://ranaayushman.github.io/shopping-/'>
-                <img className='rounded-lg border-custom-blue border-solid border-2 h-full w-full' src='/img/shop.png' />
+              <a href='https://nike-by-ayushman.vercel.app/'>
+                <img className='rounded-lg border-custom-blue border-solid border-2 h-full w-full' src='/img/NikeCopy.png' />
               </a>
             </div>
             <div className='w-full p-3 pb-0 rounded-full'>
-              <p className='text-left'>I made my first ecommerce website using HTML and CSS only with a little help of JS</p>
+              <p className='text-left'>With the help of enthusiasm and dedication I made this Nike Clone website</p>
             </div>
             <div className='m-3'>
-              <a href="https://ranaayushman.github.io/shopping-/" className="px-6 py-3 bg-gradient-to-r from-[#5A639C] to-[#37B7C3] rounded-full hover:from-pink-500 hover:to-[#1c6065] transition duration-300">Live Preview</a>
+              <a href="https://nike-by-ayushman.vercel.app/" className="px-6 py-3 bg-gradient-to-r from-[#5A639C] to-[#37B7C3] rounded-full hover:from-pink-500 hover:to-[#1c6065] transition duration-300">Live Preview</a>
             </div>
           </div>
           {/* card 2 ends here */}
