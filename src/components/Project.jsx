@@ -1,95 +1,67 @@
-import React from "react";
-import MaxWidthWrapper from "./const/mmw";
+import React from 'react';
+
+const projectsData = [
+  {
+    id: 1,
+    name: "My First Webpage",
+    description: "I made my first webpage using ReactJS and TailwindCSS",
+    imageUrl: "/img/nexus.png",
+    liveUrl: "www.lalalaa.com"
+  },
+  {
+    id: 2,
+    name: "Nike Clone",
+    description: "With the help of enthusiasm and dedication I made this Nike Clone website",
+    imageUrl: "/img/NikeCopy.png",
+    liveUrl: "https://nike-by-ayushman.vercel.app/"
+  },
+  {
+    id: 3,
+    name: "Tindog",
+    description: "This webpage was made in the journey of learning HTML, CSS and Bootstrap",
+    imageUrl: "/img/tindog.png",
+    liveUrl: "https://ranaayushman.github.io/tindog/"
+  }
+];
 
 const Project = () => {
   return (
-    <section
-      id="projects"
-      className="bg-custom-purple pt-16 h-full mt-0 px-12 text-custom-text"
-    >
-      <MaxWidthWrapper>
-        <h1 className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#5A639C] from-3% to-[#37B7C3] to-77%">
-          Projects
-        </h1>
+    <section id='projects' className='bg-custom-purple pt-16 min-h-screen mt-0 px-4 sm:px-6 lg:px-12 text-custom-text'>
+      <h1 className='text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#5A639C] from-3% to-[#37B7C3] to-77%'>
+        Projects
+      </h1>
 
-        <div className="cards flex gap-x-4 mt-10 h-full">
-          <div className="w-1/3 shadow-md shadow-red-200 border-custom-blue border-solid border-2 p-3 rounded-xl flex flex-col text-center gap-y-12">
-            <div className="w-full p-1 drop-shadow-lg h-52">
-              <a href="www.lalalaa.com">
-                <img
-                  className="rounded-lg border-custom-blue border-solid border-2 object-cover h-full w-full"
-                  src="/img/nexus.png"
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10'>
+        {projectsData.map((project) => (
+          <div key={project.id} className='shadow-md shadow-red-200 border-custom-blue border-solid border-2 p-3 rounded-xl flex flex-col text-center gap-y-6'>
+            <div className='w-full p-1 drop-shadow-lg h-52'>
+              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                <img 
+                  className='rounded-lg border-custom-blue border-solid border-2 object-cover h-full w-full' 
+                  src={project.imageUrl} 
+                  alt={project.name}
                 />
               </a>
             </div>
-            <div className="w-full p-3 pb-0 rounded-full">
-              <p className="text-left">
-                I made my first webpage using ReactJS and TailwindCSS
-              </p>
+            <div className='w-full p-3 pb-0'>
+              <h2 className='text-xl font-semibold mb-2'>{project.name}</h2>
+              <p className='text-left'>{project.description}</p>
             </div>
-            <div className="m-3">
-              <a
-                href="/path-to-your-cv.pdf"
+            <div className='mt-auto p-3'>
+              <a 
+                href={project.liveUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="px-6 py-3 bg-gradient-to-r from-[#5A639C] to-[#37B7C3] rounded-full hover:from-pink-500 hover:to-[#1c6065] transition duration-300"
               >
                 Live Preview
               </a>
             </div>
           </div>
-
-          <div className="w-1/3 shadow-md shadow-red-200 border-custom-blue border-solid border-2 p-3 rounded-xl flex flex-col text-center gap-y-12">
-            <div className="w-full p-1 drop-shadow-lg h-52">
-              <a href="https://nike-by-ayushman.vercel.app/">
-                <img
-                  className="rounded-lg border-custom-blue border-solid border-2 h-full w-full"
-                  src="/img/NikeCopy.png"
-                />
-              </a>
-            </div>
-            <div className="w-full p-3 pb-0 rounded-full">
-              <p className="text-left">
-                With the help of enthusiasm and dedication I made this Nike
-                Clone website
-              </p>
-            </div>
-            <div className="m-3">
-              <a
-                href="https://nike-by-ayushman.vercel.app/"
-                className="px-6 py-3 bg-gradient-to-r from-[#5A639C] to-[#37B7C3] rounded-full hover:from-pink-500 hover:to-[#1c6065] transition duration-300"
-              >
-                Live Preview
-              </a>
-            </div>
-          </div>
-
-          <div className="w-1/3 shadow-md border-custom-blue shadow-red-200 border-solid border-2 p-3 rounded-xl flex flex-col text-center gap-y-12">
-            <div className="w-full p-1 drop-shadow-lg h-52">
-              <a href="https://ranaayushman.github.io/tindog/">
-                <img
-                  className="rounded-lg border-custom-blue border-solid border-2 h-full w-full"
-                  src="/img/tindog.png"
-                />
-              </a>
-            </div>
-            <div className="w-full p-3 pb-0 rounded-full">
-              <p className="text-left">
-                This webpage was made in the journey of learning HTMl CSS and
-                Bootstrap
-              </p>
-            </div>
-            <div className="m-3">
-              <a
-                href="https://ranaayushman.github.io/tindog/"
-                className="px-6 py-3 bg-gradient-to-r from-[#5A639C] to-[#37B7C3] rounded-full hover:from-pink-500 hover:to-[#1c6065] transition duration-300"
-              >
-                Live Preview
-              </a>
-            </div>
-          </div>
-        </div>
-      </MaxWidthWrapper>
+        ))}
+      </div>
     </section>
   );
-};
+}
 
 export default Project;
