@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const projectsData = [
   {
@@ -39,9 +40,11 @@ const Project = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
         {projectsData.map((project) => (
-          <div
+          <motion.div
             key={project.id}
             className="shadow-md shadow-red-200 border-custom-blue border-solid border-2 p-3 rounded-xl flex flex-col text-center gap-y-6"
+            whileHover={{ scale: 1.05 }} 
+            transition={{ type: "spring", stiffness: 300 }} 
           >
             <div className="w-full p-1 drop-shadow-lg h-52">
               <a
@@ -70,7 +73,7 @@ const Project = () => {
                 Live Preview
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
